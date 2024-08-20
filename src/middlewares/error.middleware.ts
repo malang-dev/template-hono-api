@@ -4,7 +4,6 @@ import { InternalServerErrorException } from "@/exceptions/internal-server.excep
 import { NotFoundException } from "@/exceptions/not-found.exception";
 import { IExceptionMessage, ResponseFormat } from "@/utils/response";
 import { StatusCodes } from "@/utils/status-codes.js";
-import { isEmpty } from "@/utils/string";
 import { Context, ErrorHandler, NotFoundHandler } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { ZodError } from "zod";
@@ -13,18 +12,6 @@ export const errorHandler: ErrorHandler = async (err: any, ctx: Context<Environm
   let exception: BaseException;
   const responseFormat = new ResponseFormat<object>(ctx);
   const errors: IExceptionMessage[] = [];
-
-  let bodyParse: object;
-  if (ctx.req.raw.bodyUsed) {
-    bodyParse = await ctx.req.json();
-    bodyParse = !isEmpty(bodyParse) ? bodyParse : undefined;
-  }
-
-  let paramParse: object = ctx.req.param();
-  paramParse = !isEmpty(paramParse) ? paramParse : undefined;
-
-  let queryParse: object = ctx.req.query();
-  queryParse = !isEmpty(queryParse) ? queryParse : undefined;
 
   if (err instanceof ZodError) {
     exception = new BadRequestException();
@@ -48,46 +35,14 @@ export const errorHandler: ErrorHandler = async (err: any, ctx: Context<Environm
     }
     errors.push(new IExceptionMessage(exception.codes, exception.message, exception.stack));
   }
-  return responseFormat
-    .withRequestData({
-      timestamp: new Date(),
-      method: ctx.req.method,
-      path: ctx.req.path,
-      body: bodyParse,
-      params: paramParse,
-      query: queryParse,
-    })
-    .withErrors(errors)
-    .json(null, exception.status);
+  return responseFormat.withErrors(errors).json(null, exception.status);
 };
 
 export const notFoundHandler: NotFoundHandler = async (ctx: Context<Environment>) => {
   const responseFormat = new ResponseFormat<object>(ctx);
   const exception: BaseException = new NotFoundException();
-  const errors: IExceptionMessage[] = [];
 
-  let bodyParse: object;
-  if (ctx.req.raw.bodyUsed) {
-    bodyParse = await ctx.req.json();
-    bodyParse = !isEmpty(bodyParse) ? bodyParse : undefined;
-  }
-
-  let paramParse: object = ctx.req.param();
-  paramParse = !isEmpty(paramParse) ? paramParse : undefined;
-
-  let queryParse: object = ctx.req.query();
-  queryParse = !isEmpty(queryParse) ? queryParse : undefined;
-
-  errors.push(new IExceptionMessage(exception.codes, exception.message, exception.stack));
   return responseFormat
-    .withRequestData({
-      timestamp: new Date(),
-      method: ctx.req.method,
-      path: ctx.req.path,
-      body: bodyParse,
-      params: paramParse,
-      query: queryParse,
-    })
-    .withErrors(errors)
+    .withErrors([new IExceptionMessage(exception.codes, exception.message, exception.stack)])
     .json(null, exception.status);
 };
