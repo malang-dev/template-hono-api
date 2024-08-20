@@ -1,0 +1,6 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": ["on the 1st day of the month"],
+  "extends": ["config:recommended", ":semanticCommitTypeAll(build)", "group:allNonMajor"],
+  "ignoreDeps": ["eslint"]
+}
