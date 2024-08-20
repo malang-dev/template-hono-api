@@ -4,7 +4,7 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "eslint.validate": ["javascript", "typescript"],
-  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "[json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
