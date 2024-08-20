@@ -49,7 +49,7 @@
     "typescript": "^5.4.2"
   },
   "lint-staged": {
-    "src/**/*.{ts|test.ts}": [
+    "src/**/*.ts": [
       "eslint \"src/**/*.ts\"",
       "prettier --write --ignore-unknown"
     ]

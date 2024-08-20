@@ -26,10 +26,11 @@
 5. Done, Happy coding!!!.
 
 ## Roadmap
-[ ] Implementasi cloudflare worker
-[ ] Implementasi drizzle-orm dan drizzle-kit
-[ ] Implementasi dengan docker (Dockerfile menggunakan image strech, Build command)
-[ ] Tambahkan fitur ambil client ip address
+- [ ] Implementasi cloudflare worker
+- [ ] Implementasi drizzle-orm dan drizzle-kit
+- [ ] Implementasi dengan docker (Dockerfile menggunakan image strech, Build command)
+- [ ] Tambahkan fitur ambil client ip address
+- [ ] Update github workflow
 
 ## Contributing
 
