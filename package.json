@@ -56,8 +56,8 @@
   },
   "tsup": {
     "entry": [
-      "src",
-      "!src/**/*.test.*"
+      "src/serve.ts",
+      "src/main.ts"
     ],
     "splitting": false,
     "sourcemap": true,
