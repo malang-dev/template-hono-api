@@ -1,4 +1,4 @@
-import { StatusCodes } from "@/utils/status-codes";
+import { StatusCodes } from "@/utils/status";
 import { Context } from "hono";
 
 type HeaderRecord = Record<string, string | string[]>;

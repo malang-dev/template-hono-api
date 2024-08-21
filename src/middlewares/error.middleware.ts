@@ -3,7 +3,7 @@ import { BaseException } from "@/exceptions/base.exception";
 import { InternalServerErrorException } from "@/exceptions/internal-server.exception";
 import { NotFoundException } from "@/exceptions/not-found.exception";
 import { IExceptionMessage, ResponseFormat } from "@/utils/response";
-import { StatusCodes } from "@/utils/status-codes.js";
+import { StatusCodes } from "@/utils/status";
 import { Context, ErrorHandler, NotFoundHandler } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { ZodError } from "zod";

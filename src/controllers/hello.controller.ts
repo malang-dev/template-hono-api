@@ -1,5 +1,5 @@
 import { ResponseFormat } from "@/utils/response";
-import { StatusCodes } from "@/utils/status-codes";
+import { StatusCodes } from "@/utils/status";
 import { Context, Handler } from "hono";
 
 const getHello: Handler = (ctx: Context<Environment>) => {

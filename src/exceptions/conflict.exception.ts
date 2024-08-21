@@ -1,5 +1,5 @@
 import { BaseException } from "@/exceptions/base.exception";
-import { StatusCodes } from "@/utils/status-codes";
+import { StatusCodes } from "@/utils/status";
 
 export class ConflictException extends BaseException {
   constructor(message: string) {
