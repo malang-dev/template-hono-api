@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/malang-dev/template-hono-api">
-    <img src="https://svgshare.com/i/14V6.svg" alt="Typescript" width="150px">
+    <img src="https://www.svgrepo.com/show/303600/typescript-logo.svg" alt="Typescript" width="150px">
   </a>
   <h2 align="center">@malang-dev/template-hono-api</h2>
   <div align="center">

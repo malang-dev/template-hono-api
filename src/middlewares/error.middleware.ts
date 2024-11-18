@@ -8,7 +8,7 @@ import { Context, ErrorHandler, NotFoundHandler } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { ZodError } from "zod";
 
-export const errorHandler: ErrorHandler = async (err: any, ctx: Context<Environment>) => {
+export const errorHandler: ErrorHandler = (err: any, ctx: Context<Environment>) => {
   let exception: BaseException;
   const responseFormat = new ResponseFormat<object>(ctx);
   const errors: IExceptionMessage[] = [];
@@ -38,7 +38,7 @@ export const errorHandler: ErrorHandler = async (err: any, ctx: Context<Environm
   return responseFormat.withErrors(errors).json(null, exception.status);
 };
 
-export const notFoundHandler: NotFoundHandler = async (ctx: Context<Environment>) => {
+export const notFoundHandler: NotFoundHandler = (ctx: Context<Environment>) => {
   const responseFormat = new ResponseFormat<object>(ctx);
   const exception: BaseException = new NotFoundException();
 
