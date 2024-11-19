@@ -2665,9 +2665,9 @@ hono-pino@^0.1.1:
     pino "^9.2.0"
 
 hono@^4.5.6:
-  version "4.5.6"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.5.6.tgz#21967fa7fca449a03dac64c0e3be2eece094481c"
-  integrity sha512-9SuUC/zLQv8YAcnIxJko0KCeLI0Q6menPsDWuJ9jaH+r8ZkVXeLqeLs1QJXCPKKbURAWj9x0SJBSFh803EnAUw==
+  version "4.6.10"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.6.10.tgz#b778437fd1124b1ebef5798b420213528f4c5a67"
+  integrity sha512-IXXNfRAZEahFnWBhUUlqKEGF9upeE6hZoRZszvNkyAz/CYp+iVbxm3viMvStlagRJohjlBRGOQ7f4jfcV0XMGg==
 
 hosted-git-info@^2.1.4:
   version "2.8.9"
