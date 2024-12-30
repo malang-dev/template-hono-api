@@ -1,5 +1,8 @@
+// deno-lint-ignore-file
 declare module "hono" {
-  interface ContextVariableMap {}
+  interface ContextVariableMap {
+    requestId: string;
+  }
 }
 
 // If this file has no import/export statements (i.e. is a script)

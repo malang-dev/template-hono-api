@@ -4,11 +4,11 @@ import { InternalServerErrorException } from "@/exceptions/internal-server.excep
 import { NotFoundException } from "@/exceptions/not-found.exception";
 import { IExceptionMessage, ResponseFormat } from "@/utils/response";
 import { StatusCodes } from "@/utils/status";
-import { Context, ErrorHandler, NotFoundHandler } from "hono";
+import { type Context } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { ZodError } from "zod";
 
-export const errorHandler: ErrorHandler = (err: any, ctx: Context<Environment>) => {
+export function errorHandler(err: any, ctx: Context<Environment>) {
   let exception: BaseException;
   const responseFormat = new ResponseFormat<object>(ctx);
   const errors: IExceptionMessage[] = [];
@@ -36,13 +36,13 @@ export const errorHandler: ErrorHandler = (err: any, ctx: Context<Environment>) 
     errors.push(new IExceptionMessage(exception.codes, exception.message, exception.stack));
   }
   return responseFormat.withErrors(errors).json(null, exception.status);
-};
+}
 
-export const notFoundHandler: NotFoundHandler = (ctx: Context<Environment>) => {
+export function notFoundHandler(ctx: Context<Environment>) {
   const responseFormat = new ResponseFormat<object>(ctx);
   const exception: BaseException = new NotFoundException();
 
   return responseFormat
     .withErrors([new IExceptionMessage(exception.codes, exception.message, exception.stack)])
     .json(null, exception.status);
-};
+}
