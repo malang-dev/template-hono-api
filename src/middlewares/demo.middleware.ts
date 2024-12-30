@@ -1,7 +1,7 @@
 import { ServiceUnavailableException } from "@/exceptions/service-unavailable.exception";
 import { MiddlewareHandler } from "hono";
 
-export const demo = (options: { enable: boolean }): MiddlewareHandler => {
+export function demo(options: { enable: boolean }): MiddlewareHandler {
   if (!options) {
     throw new Error(`demo middleware requires options "enable".`);
   }
@@ -14,4 +14,4 @@ export const demo = (options: { enable: boolean }): MiddlewareHandler => {
       await next();
     }
   };
-};
+}
