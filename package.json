@@ -71,7 +71,7 @@
     "@hono/swagger-ui": "^0.5.0",
     "dotenv": "^17.0.0",
     "hono": "^4.5.6",
-    "uuid": "^11.0.3",
+    "uuid": "^13.0.0",
     "winston": "^3.17.0",
     "winston-transport": "^4.9.0",
     "zod": "^3.23.8"
