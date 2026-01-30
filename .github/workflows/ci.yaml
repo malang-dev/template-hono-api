@@ -2,10 +2,13 @@ name: Run CI
 
 on:
   push:
-    branches: master
-    tags: v*
+    branches: 
+      - master
+    tags: 
+      - v*
   pull_request:
-    branches: "*"
+    branches: 
+      - "*"
 
 jobs:
   all:
@@ -13,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [20.x, 22.x]
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org

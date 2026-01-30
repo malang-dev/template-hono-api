@@ -58,9 +58,9 @@ jobs:
     needs: create_release
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18.x
+          node-version: 20.x
           registry-url: https://registry.npmjs.org
           cache: yarn
 
