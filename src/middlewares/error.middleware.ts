@@ -15,7 +15,7 @@ export function errorHandler(err: any, ctx: Context<Environment>) {
 
   if (err instanceof ZodError) {
     exception = new BadRequestException();
-    err.errors.forEach((x) =>
+    err.issues.forEach((x) =>
       errors.push(
         new IExceptionMessage(
           "VALIDATION_ERROR",
