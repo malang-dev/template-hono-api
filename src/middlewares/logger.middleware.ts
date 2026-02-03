@@ -17,6 +17,14 @@ export function loggerMiddleware(): MiddlewareHandler {
     const req = onRequestData(ctx);
     log.info(`Request starting: ${req.method} ${req.url}`);
 
+    if (req.method == "GET") {
+      const query = ctx.req.query();
+      log.debug(`Received query: ` + JSON.stringify(query));
+    } else if (["POST", "PUT", "PATCH"].includes(req.method)) {
+      const body = await ctx.req.json();
+      log.debug(`Received body: ` + JSON.stringify(body));
+    }
+
     await next();
 
     const res = onResponsData(ctx);
