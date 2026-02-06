@@ -1,9 +1,19 @@
-import z from "zod";
+import { z } from "@hono/zod-openapi";
 
-const helloWorld = z.object({
-  parameter: z.string().min(1, "World is required"),
+const getHello = z.object({
+  parameter: z
+    .string()
+    .min(1, "World is required")
+    .openapi({
+      param: {
+        name: "parameter",
+        in: "path",
+      },
+      example: "World",
+      description: "Default parameter for hello endpoint",
+    }),
 });
 
 export const HelloValidation = {
-  helloWorld,
+  getHello,
 };

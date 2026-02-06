@@ -8,7 +8,7 @@ export function loggerMiddleware(): MiddlewareHandler {
     status: ctx.res.status,
     headers: ctx.res.headers,
   });
-  return async function createMiddleware(ctx, next) {
+  return async function createMiddleware(ctx: Context<Environment>, next) {
     const reqId = v7();
     ctx.set("requestId", reqId);
     ctx.header("x-request-id", reqId);
@@ -17,12 +17,14 @@ export function loggerMiddleware(): MiddlewareHandler {
     const req = onRequestData(ctx);
     log.info(`Request starting: ${req.method} ${req.url}`);
 
-    if (req.method == "GET") {
-      const query = ctx.req.query();
-      log.debug(`Received query: ` + JSON.stringify(query));
-    } else if (["POST", "PUT", "PATCH"].includes(req.method)) {
-      const body = await ctx.req.json();
-      log.debug(`Received body: ` + JSON.stringify(body));
+    if (ctx.env.NODE_ENV === "development") {
+      if (req.method == "GET") {
+        const query = ctx.req.query();
+        log.debug(`Received query: ` + JSON.stringify(query));
+      } else if (["POST", "PUT", "PATCH"].includes(req.method)) {
+        const body = await ctx.req.json();
+        log.debug(`Received body: ` + JSON.stringify(body));
+      }
     }
 
     await next();

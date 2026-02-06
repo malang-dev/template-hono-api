@@ -3,8 +3,6 @@ type Environment = {
 };
 
 type EnvironmentBindings = {
-  remoteAddr: () => string;
-
-  // Define all environment variables
+  // Define environment variable, if deploy in cloudflare worker
   NODE_ENV: string;
 };

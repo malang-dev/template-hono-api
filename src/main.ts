@@ -2,15 +2,15 @@ import { demo } from "@/middlewares/demo.middleware";
 import { errorHandler, notFoundHandler } from "@/middlewares/error.middleware";
 import { loggerMiddleware } from "@/middlewares/logger.middleware";
 import { DefaultRoute } from "@/routes/base.route";
-import { swaggerUI } from "@hono/swagger-ui";
+import { setupDocumentation } from "@/utils/docs";
+import { OpenAPIHono } from "@hono/zod-openapi";
 import { existsSync, readFileSync } from "fs";
-import { Hono } from "hono";
 import { contextStorage } from "hono/context-storage";
 import { cors } from "hono/cors";
 import { prettyJSON } from "hono/pretty-json";
 import { serveStatic } from "hono/serve-static";
 
-const app = new Hono<Environment>();
+const app = new OpenAPIHono<Environment>();
 const isDemo = process.env.NODE_ENV == "demo";
 
 // middleware
@@ -32,12 +32,7 @@ app.use(
     },
   }),
 );
-app.get(
-  "/",
-  swaggerUI({
-    url: "/static/openapi.yaml",
-  }),
-);
+setupDocumentation(app);
 
 // errors handler
 app.onError(errorHandler);

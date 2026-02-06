@@ -1,9 +1,9 @@
-import { V1Route } from "@/routes/v1.route";
+import { HelloRoute } from "@/routes/hello.route";
 
 const defaultRoutes = [
   {
     path: `/api/v1`,
-    route: V1Route,
+    route: HelloRoute,
   },
 ];
 export const DefaultRoute = defaultRoutes;

@@ -7,13 +7,13 @@ import { type Context, Handler } from "hono";
 
 const getHello: Handler = async (ctx: Context<Environment>) => {
   const paramParse = ctx.req.param();
-  const { parameter } = await HelloValidation.helloWorld.parseAsync(paramParse);
+  const { parameter } = await HelloValidation.getHello.parseAsync(paramParse);
 
   const log = getLogger();
   log.warn("HelloController.getHello");
 
   const responseFormat = new ResponseFormat(ctx);
-  const sampleData = { hello: parameter, timestamp: new Date(), ip: getConnInfo(ctx) };
+  const sampleData = { parameter, timestamp: new Date(), ip: getConnInfo(ctx) };
   return responseFormat.json(sampleData, StatusCodes.OK);
 };
 
