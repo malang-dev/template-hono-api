@@ -64,6 +64,9 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: yarn
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Update package.json version
         run: yarn version --no-git-tag-version --new-version ${{ env.INPUT_VENDOR_VERSION }}
 
