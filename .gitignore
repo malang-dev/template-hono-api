@@ -4,6 +4,7 @@ dist/
 # dependencies
 node_modules/
 .yarn/
+.turbo/
 
 # logs
 npm-debug.log*
