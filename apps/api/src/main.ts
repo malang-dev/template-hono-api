@@ -1,3 +1,4 @@
+import { authSessionMiddleware } from "@/middlewares/auth.middleware";
 import { demo } from "@/middlewares/demo.middleware";
 import { errorHandler, notFoundHandler } from "@/middlewares/error.middleware";
 import { loggerMiddleware } from "@/middlewares/logger.middleware";
@@ -17,6 +18,9 @@ const isDemo = process.env.NODE_ENV == "demo";
 app.use("*", cors());
 app.use("*", prettyJSON());
 app.use("*", contextStorage(), loggerMiddleware());
+
+// auth session middleware
+app.use("*", authSessionMiddleware());
 
 // is demo ?
 app.use("/api/*", demo({ enable: isDemo }));

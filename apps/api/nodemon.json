@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/nodemon",
+  "signal": "SIGTERM",
   "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules"],
   "watch": ["src"],
   "exec": "run-s \"build\" \"start\"",

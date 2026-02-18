@@ -13,7 +13,7 @@ route.openapi(
     description: "Description about hello endopoint",
     tags: ["Hello"],
     method: "get",
-    path: "/hello/{parameter}",
+    path: "/{parameter}",
     request: {
       params: HelloValidation.getHello,
     },
@@ -21,7 +21,6 @@ route.openapi(
       [StatusCodes.OK]: ResponseSchema({
         name: "GetHelloResponse",
         description: "Success get hello",
-        // model: HelloModel,
       }),
     },
   }),

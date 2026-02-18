@@ -1,7 +1,11 @@
 // deno-lint-ignore-file
+import { auth } from "@/utils/auth";
+
 declare module "hono" {
   interface ContextVariableMap {
     requestId: string;
+    user: typeof auth.$Infer.Session.user | null;
+    session: typeof auth.$Infer.Session.session | null;
   }
 }
 

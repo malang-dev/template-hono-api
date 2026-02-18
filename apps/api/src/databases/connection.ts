@@ -1,5 +1,7 @@
-import { userProfile, userProfileRelation } from "@/databases/schemas/user-profile.schema";
+import { account, accountRelation } from "@/databases/schemas/account.schema";
+import { session, sessionRelation } from "@/databases/schemas/session.schema";
 import { user, userRelation } from "@/databases/schemas/user.schema";
+import { verification } from "@/databases/schemas/verification.schema";
 import { createClient } from "@libsql/client";
 import { drizzle, LibSQLDatabase, LibSQLTransaction } from "drizzle-orm/libsql";
 import { BuildQueryResult, DBQueryConfig, ExtractTablesWithRelations } from "drizzle-orm/relations";
@@ -7,11 +9,14 @@ import { BuildQueryResult, DBQueryConfig, ExtractTablesWithRelations } from "dri
 export const dbSchema = {
   // Table
   user,
-  userProfile,
+  session,
+  account,
+  verification,
 
   // Relation
   userRelation,
-  userProfileRelation,
+  sessionRelation,
+  accountRelation,
 };
 
 const client = createClient({
