@@ -27,6 +27,23 @@
 cd apps/api && yarn test -- path/to/file.test.ts
 ```
 
+**Web app specific (in `apps/web/`):**
+
+- `yarn dev` - Start Vite dev server (default port: 5173)
+- `yarn build` - Type-check and build for production
+- `yarn preview` - Preview production build
+- `yarn lint` - ESLint with auto-fix on src/\*_/_.{ts,vue}
+- `yarn format` - Prettier formatting
+- `yarn test` - Run Vitest tests
+- `yarn test:cov` - Run tests with coverage
+- `yarn test:watch` - Run tests in watch mode
+
+**Run single test file:**
+
+```bash
+cd apps/web && yarn test -- path/to/file.test.ts
+```
+
 ## Code Style Guidelines
 
 **Imports:**
@@ -95,6 +112,20 @@ apps/api/src/
     utils.ts         # Database utilities (pagination, helpers)
 ```
 
+**Web app project structure:**
+
+```
+apps/web/src/
+  assets/        # Static assets (CSS, images)
+  components/    # Reusable Vue components
+  views/         # Page-level components (routed views)
+  router/        # Vue Router configuration
+  stores/        # Pinia stores for state management
+  App.vue        # Root component
+  main.ts        # Application entry point
+  env.d.ts       # Environment type declarations
+```
+
 **Environment Variables:**
 
 - `NODE_ENV` - Environment (development, production, demo)
@@ -124,7 +155,7 @@ apps/api/src/
 
 - Yarn workspaces with Turbo
 - Shared packages in `packages/`: eslint-config, typescript-config
-- Apps in `apps/`: api (Hono API)
+- Apps in `apps/`: api (Hono API), web (Vue.js)
 - Workspace references: `@malang-dev/*`
 
 **Pre-commit Hooks:**

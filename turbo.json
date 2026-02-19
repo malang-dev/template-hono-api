@@ -21,5 +21,5 @@
       "cache": false
     }
   },
-  "globalEnv": ["NODE_ENV", "PORT"]
+  "globalEnv": ["NODE_ENV", "PORT", "BASE_URL", "VITE_*"]
 }
