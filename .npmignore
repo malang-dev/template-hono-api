@@ -3,6 +3,8 @@ src/
 
 # dependencies
 node_modules/
+.yarn/
+.turbo/
 renovate.json
 
 # logs

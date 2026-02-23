@@ -3,6 +3,8 @@ dist/
 
 # dependencies
 node_modules/
+.yarn/
+.turbo/
 
 # logs
 npm-debug.log*
@@ -16,3 +18,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# sqlite database
+*.db
