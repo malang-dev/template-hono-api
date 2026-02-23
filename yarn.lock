@@ -1258,10 +1258,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.2, @eslint/js@npm:^9.0.0":
+"@eslint/js@npm:9.39.2":
   version: 9.39.2
   resolution: "@eslint/js@npm:9.39.2"
   checksum: 10c0/00f51c52b04ac79faebfaa65a9652b2093b9c924e945479f1f3945473f78aee83cbc76c8d70bbffbf06f7024626575b16d97b66eab16182e1d0d39daff2f26f5
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.0.0":
+  version: 9.39.3
+  resolution: "@eslint/js@npm:9.39.3"
+  checksum: 10c0/df1c70d6681c8daf4a3c86dfac159fcd98a73c4620c4fbe2be6caab1f30a34c7de0ad88ab0e81162376d2cde1a2eed1c32eff5f917ca369870930a51f8e818f1
   languageName: node
   linkType: hard
 
@@ -1955,10 +1962,10 @@ __metadata:
     eslint: "npm:^9.39.0"
     eslint-plugin-vue: "npm:^9.32.0"
     happy-dom: "npm:^16.0.0"
-    lucide-vue-next: "npm:^0.469.0"
+    lucide-vue-next: "npm:^0.575.0"
     pinia: "npm:^3.0.0"
     prettier: "npm:^3.2.5"
-    prettier-plugin-tailwindcss: "npm:^0.6.0"
+    prettier-plugin-tailwindcss: "npm:^0.7.0"
     radix-vue: "npm:^1.9.0"
     tailwind-merge: "npm:^2.5.0"
     tailwindcss: "npm:^4.0.0"
@@ -2232,42 +2239,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scalar/core@npm:0.3.38":
-  version: 0.3.38
-  resolution: "@scalar/core@npm:0.3.38"
+"@scalar/core@npm:0.3.41":
+  version: 0.3.41
+  resolution: "@scalar/core@npm:0.3.41"
   dependencies:
-    "@scalar/types": "npm:0.6.3"
-  checksum: 10c0/a520aa70642353ddc036201ed98748a1ef2a832cf91c940cb80a567c5ba0ae9f5a90442617285df54c5cb8fffdbc10c159340882dc79ca474213fbd62a8e0972
+    "@scalar/types": "npm:0.6.6"
+  checksum: 10c0/1d47140d4fc016eb878466845d811192bd5c62137b4558a5a51dfcca58063603109fca029d8737b2e39f4c9bef0585f5b927d3ec3f884f1af5242226ca4c8ce7
   languageName: node
   linkType: hard
 
-"@scalar/helpers@npm:0.2.12":
-  version: 0.2.12
-  resolution: "@scalar/helpers@npm:0.2.12"
-  checksum: 10c0/1285c093eaed9d6422820ec0df42579040eec3173a2bf7af6ff21a90cfac292e2c445647a247db1cb389165defac61d0c3597b1b0ec285b33390643fc410b372
+"@scalar/helpers@npm:0.2.15":
+  version: 0.2.15
+  resolution: "@scalar/helpers@npm:0.2.15"
+  checksum: 10c0/04d13b193bae1da233be9d8eb67eac31ccb5d07fa6fe3b322dc38fc68ef740a593026b3baf763e7f805ca217f5ed9e070cec65abf3d764e6a15c5defd258e41c
   languageName: node
   linkType: hard
 
 "@scalar/hono-api-reference@npm:^0.9.40":
-  version: 0.9.41
-  resolution: "@scalar/hono-api-reference@npm:0.9.41"
+  version: 0.9.44
+  resolution: "@scalar/hono-api-reference@npm:0.9.44"
   dependencies:
-    "@scalar/core": "npm:0.3.38"
+    "@scalar/core": "npm:0.3.41"
   peerDependencies:
     hono: ^4.11.5
-  checksum: 10c0/24e9f09f6560c902983475e074183bfeeb02e8d2c0a5a17f4940edda21b7b6768e8526b72da3c6f1a5bf622668a3e3bc1ecd6a04cf384f87f81b2c6082db0451
+  checksum: 10c0/8cab0a5974a74bdd1ee3be7928c6a07040f80a5d81515178e50d78b932d984573df53a13d5611523206788e3b09d3c83117fd960bc11df3f083d9387c80f466f
   languageName: node
   linkType: hard
 
-"@scalar/types@npm:0.6.3":
-  version: 0.6.3
-  resolution: "@scalar/types@npm:0.6.3"
+"@scalar/types@npm:0.6.6":
+  version: 0.6.6
+  resolution: "@scalar/types@npm:0.6.6"
   dependencies:
-    "@scalar/helpers": "npm:0.2.12"
+    "@scalar/helpers": "npm:0.2.15"
     nanoid: "npm:^5.1.6"
     type-fest: "npm:^5.3.1"
     zod: "npm:^4.3.5"
-  checksum: 10c0/608eb5ac9b4cf16e9676ac16101bd1359062c21d5ee91ec9b67f55a3cbb75851c2ad9d2902c1282274ca113c4d77e1f25311675d2c37b6caa80d7a2e2160b39a
+  checksum: 10c0/a11fdec4c66759b3227c052d8d8fe483e157d1af015ef206f5f9a71df3eb314ad9d392dd7d0e64d2d81a5d37c2ec152fdfa19a98de4511bf11e182fa87196c72
   languageName: node
   linkType: hard
 
@@ -5512,9 +5519,9 @@ __metadata:
   linkType: hard
 
 "hono@npm:^4.5.6":
-  version: 4.11.10
-  resolution: "hono@npm:4.11.10"
-  checksum: 10c0/cd5c2df38cac939d626a7ad7881a6f6872078af2ef2b776602fc71b557060dedf70067ea3049a8c523018e2ad73ea89bac6cf21e0ac34f852efe18d8fffef6f4
+  version: 4.12.2
+  resolution: "hono@npm:4.12.2"
+  checksum: 10c0/c7a60969ea03384898b3ddd216912fee3ecb7640a250b95078ea6548afe5ad29ad2d378f45fa49eee5969dcbb2a5849dff808d0d38e7472ca2d886b59ba25e11
   languageName: node
   linkType: hard
 
@@ -6749,12 +6756,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-vue-next@npm:^0.469.0":
-  version: 0.469.0
-  resolution: "lucide-vue-next@npm:0.469.0"
+"lucide-vue-next@npm:^0.575.0":
+  version: 0.575.0
+  resolution: "lucide-vue-next@npm:0.575.0"
   peerDependencies:
     vue: ">=3.0.1"
-  checksum: 10c0/5691357e3e2ca9e4d1c83ac0f205d0b761f6f4efbea3f8198734631850e3346bc463929ca1a6d7281ef75ee7932db53b7dce6dd8ad2fb2a8bb65a2ce53b0c401
+  checksum: 10c0/6862ae20d1449e99ab8a1de27caa1460edeaabe1dc26f2ccdcdaec20bdd594e9ccb523942a198d5bac199c98f0a9faee16ab7260d9bcf68a750b52768b190c3c
   languageName: node
   linkType: hard
 
@@ -7141,13 +7148,13 @@ __metadata:
   linkType: hard
 
 "nodemon@npm:^3.1.4":
-  version: 3.1.11
-  resolution: "nodemon@npm:3.1.11"
+  version: 3.1.14
+  resolution: "nodemon@npm:3.1.14"
   dependencies:
     chokidar: "npm:^3.5.2"
     debug: "npm:^4"
     ignore-by-default: "npm:^1.0.1"
-    minimatch: "npm:^3.1.2"
+    minimatch: "npm:^10.2.1"
     pstree.remy: "npm:^1.1.8"
     semver: "npm:^7.5.3"
     simple-update-notifier: "npm:^2.0.0"
@@ -7156,7 +7163,7 @@ __metadata:
     undefsafe: "npm:^2.0.5"
   bin:
     nodemon: bin/nodemon.js
-  checksum: 10c0/f3c17897146f680eaf93f5e1f53b1fd4acbd61e4f7526ec6cbcc993d1c14cee8c722c41b30aa8b101447f672d38e6d7b17c97e77540df191d724826bb16ce474
+  checksum: 10c0/074f2056051a148ad11cda0d6c3f905bdef93a878792385f16e1dff0c63dcf07f23ebe1ab3763dca7314d0266e12129f066070545d817a205ee050a22eff50b0
   languageName: node
   linkType: hard
 
@@ -7601,9 +7608,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.6.0":
-  version: 0.6.14
-  resolution: "prettier-plugin-tailwindcss@npm:0.6.14"
+"prettier-plugin-tailwindcss@npm:^0.7.0":
+  version: 0.7.2
+  resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -7615,14 +7622,12 @@ __metadata:
     prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
-    prettier-plugin-import-sort: "*"
     prettier-plugin-jsdoc: "*"
     prettier-plugin-marko: "*"
     prettier-plugin-multiline-arrays: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
     prettier-plugin-sort-imports: "*"
-    prettier-plugin-style-order: "*"
     prettier-plugin-svelte: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
@@ -7643,8 +7648,6 @@ __metadata:
       optional: true
     prettier-plugin-css-order:
       optional: true
-    prettier-plugin-import-sort:
-      optional: true
     prettier-plugin-jsdoc:
       optional: true
     prettier-plugin-marko:
@@ -7657,11 +7660,9 @@ __metadata:
       optional: true
     prettier-plugin-sort-imports:
       optional: true
-    prettier-plugin-style-order:
-      optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/1bf635be28b30b3f171a184497eecf512601d19328e402dd2eb1ede52aa57b4f5b605eae2929f4916de9ba22526f3d730d9afa90334db09d17c59f463f7b26d8
+  checksum: 10c0/072fb79be58ba6b9743eb4b85be7da06f7d719764e293fdaf6515f15b21af2d22ab0e6476c636c69983949e42c4382e9566b17e3b123a2df6cf5100336729f3c
   languageName: node
   linkType: hard
 
