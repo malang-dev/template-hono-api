@@ -1,0 +1,23 @@
+- Utility bill payments (PLN, PDAM, PGN)
+- Telecom products (Pulsa, data packages, post-paid)
+- Financial services (BPJS, multi-finance, credit cards)
+- Digital vouchers (Games, streaming, e-wallets)
+- Tax and education payments
+- Profit margin and commission management
+- Multi-level marketing/referral system
+- Real-time transaction processing
+- Inquiry feature for bill validation
+- Balance deposit system (Bank, VA, QRIS)
+- Transaction history and financial reporting
+- 2FA/PIN security and device binding
+- Fraud detection monitoring
+- Mobile application (iOS/Android) — web only for v1.
+- Direct integrations with PPOB providers outside Digiflazz.
+- Automated billing/recurring payments
+- Multi-level MLM (only 1-level referral is supported).
+- User-to-user balance transfer.
+- Withdrawal/cash-out of platform balance to bank accounts.
+- White-label/sub-operator functionality.
+- Public API for resellers to integrate their own systems (API access is admin + web only in v1).
+- Customer support ticketing system (manual support process for v1).
+- Multi-currency support (IDR only).
