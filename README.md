@@ -14,6 +14,9 @@
   </div>
 </div>
 
+> [!IMPORTANT]
+> The code is changed, old version of `template-hono-api` is archived in [here](https://github.com/malang-dev/template-hono-api/tree/v1.0.0)
+
 ## Installation & Usage
 
 1. Create a new repository by clicking the `Use this template` button.
