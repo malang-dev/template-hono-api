@@ -1,4 +1,4 @@
-# Agent Guidelines for template-hono-api
+# Agent Guidelines for template-nodejs
 
 ## Build/Lint/Test Commands (Root)
 

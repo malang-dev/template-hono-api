@@ -10,11 +10,11 @@ export function setupDocumentation(app: OpenAPIHono<Environment>) {
       description: "API Reference for Template Hono Instance",
       contact: {
         name: "API Support",
-        url: "https://github.com/malang-dev/template-hono-api",
+        url: "https://github.com/malang-dev/template-nodejs",
       },
       license: {
         name: "MIT",
-        url: "https://github.com/malang-dev/template-hono-api/blob/main/LICENSE",
+        url: "https://github.com/malang-dev/template-nodejs/blob/main/LICENSE",
       },
     },
     servers: [
@@ -34,8 +34,8 @@ export function setupDocumentation(app: OpenAPIHono<Environment>) {
         description: "Description about hello tags",
       },
     ],
-    "x-repository": "https://github.com/malang-dev/template-hono-api",
-    "x-issues": "https://github.com/malang-dev/template-hono-api/issues",
+    "x-repository": "https://github.com/malang-dev/template-nodejs",
+    "x-issues": "https://github.com/malang-dev/template-nodejs/issues",
   });
 
   app.openAPIRegistry.registerComponent("securitySchemes", "bearerAuth", {

@@ -1,10 +1,10 @@
 {
-  "name": "@malang-dev/template-hono-api",
+  "name": "@malang-dev/template-nodejs",
   "version": "1.0.0",
   "description": "Template repository for new TypeScript projects",
   "repository": {
     "type": "git",
-    "url": "https://github.com/malang-dev/template-hono-api"
+    "url": "https://github.com/malang-dev/template-nodejs"
   },
   "author": {
     "name": "Malang.dev",
