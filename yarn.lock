@@ -1921,9 +1921,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@malang-dev/template-hono-api@workspace:.":
+"@malang-dev/template-nodejs@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@malang-dev/template-hono-api@workspace:."
+  resolution: "@malang-dev/template-nodejs@workspace:."
   dependencies:
     husky: "npm:^9.0.11"
     lint-staged: "npm:^16.0.0"
