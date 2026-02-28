@@ -38,7 +38,7 @@
     "@malang-dev/eslint-config": "workspace:*",
     "@malang-dev/typescript-config": "workspace:*",
     "@types/jest": "^30.0.0",
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.0",
     "drizzle-kit": "^0.31.9",
     "eslint": "^9.39.0",
     "jest": "^30.0.0",
