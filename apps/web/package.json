@@ -29,7 +29,7 @@
     "@malang-dev/eslint-config": "workspace:*",
     "@malang-dev/typescript-config": "workspace:*",
     "@tailwindcss/vite": "^4.0.0",
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vitejs/plugin-vue": "^5.1.0",
     "@vue/test-utils": "^2.4.0",
