@@ -1960,7 +1960,7 @@ __metadata:
     prettier: "npm:^3.2.5"
     prettier-plugin-tailwindcss: "npm:^0.7.0"
     radix-vue: "npm:^1.9.0"
-    tailwind-merge: "npm:^2.5.0"
+    tailwind-merge: "npm:^3.0.0"
     tailwindcss: "npm:^4.0.0"
     typescript: "npm:^5.4.2"
     vite: "npm:^5.4.0"
@@ -8393,10 +8393,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-merge@npm:^2.5.0":
-  version: 2.6.1
-  resolution: "tailwind-merge@npm:2.6.1"
-  checksum: 10c0/f9b5d7ba37f6c6dc7bb7a090f08252e8d827b5abfc1031bf468c5274ce104409e7952a0075a3e009aab53adda8c6d133bc1dd9d3427e2ae5bc00306f9ce1fbff
+"tailwind-merge@npm:^3.0.0":
+  version: 3.6.0
+  resolution: "tailwind-merge@npm:3.6.0"
+  checksum: 10c0/a728d929f4786bcb48641db4228cc8c006a7545491783a658fb4d24d177dab960620991d17805a047309228de50ab949ca8d9e112c30183da0432367796ae186
   languageName: node
   linkType: hard
 
